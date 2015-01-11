@@ -22,6 +22,6 @@ plot(subdata$Sub_metering_1, type="l", ylab="Energy sub metering", xaxt="n", xla
 axis(1, at=c(1,1440,2880), labels=c("Thu", "Fri", "Sat"))
 lines(subdata$Sub_metering_2, col="Red")
 lines(subdata$Sub_metering_3, col="Blue")
-legend("topright",col=c("black", "blue", "red"), lwd=2, legend=c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),cex=1.5, xjust=0, seg.len=1.5)
+legend("topright",col=c("black", "blue", "red"), lwd=2, legend=c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),cex=1.0, xjust=0, seg.len=1.5)
 
 dev.off()
