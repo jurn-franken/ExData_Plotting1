@@ -7,11 +7,10 @@ unlink(temp)
 data$Date <- as.Date(data$Date,"%d/%m/%Y")
 subdata <- subset(data, Date=="2007-02-01" | Date=="2007-02-02")
 
-# --- converting to numerics
-subdata$Global_active_power <- as.numeric(as.character(subdata$Global_active_power))
+type# --- converting to numerics
+subdata$Global_active_power <- as.numeric(subdata$Global_active_power)
 
-png(filename="plot2.png", width=480, height=480)
-plot(subdata$Global_active_power, type="l", ylab = "Global Active Power (kilowats)", xaxt="n", xlab="")
-axis(1, at=c(1,1440,2880), labels=c("Thu", "Fri", "Sat"))
-dev.off()
- 
+subdata$Sub_metering_1 <- as.numeric(as.character(subdata$Sub_metering_1))
+subdata$Sub_metering_2 <- as.numeric(as.character(subdata$Sub_metering_2))
+subdata$Sub_metering_3 <- as.numeric(as.character(subdata$Sub_metering_3))
+

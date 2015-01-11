@@ -8,7 +8,7 @@ data$Date <- as.Date(data$Date,"%d/%m/%Y")
 subdata <- subset(data, Date=="2007-02-01" | Date=="2007-02-02")
 
 type# --- converting to numerics
-subdata$Global_active_power <- as.numeric(subdata$Global_active_power)
+subdata$Global_active_power <- as.numeric(as.character(subdata$Global_active_power))
 subdata$Sub_metering_1 <- as.numeric(as.character(subdata$Sub_metering_1))
 subdata$Sub_metering_2 <- as.numeric(as.character(subdata$Sub_metering_2))
 subdata$Sub_metering_3 <- as.numeric(as.character(subdata$Sub_metering_3))
